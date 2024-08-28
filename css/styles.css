@@ -404,7 +404,19 @@ header, .intro-section, .about-us, .events-section, .initiatives-section {
     display: flex;
     transition: transform 0.5s ease;
 }
-
+.carousel-slide {
+    position: absolute; /* Position slides on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Start with all slides hidden */
+    transition: opacity 0.5s ease; /* Smooth fade transition */
+}
+.carousel-slide.active {
+    opacity: 1; /* Show the active slide */
+    z-index: 1; /* Ensure the active slide is on top */
+}
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
@@ -459,6 +471,7 @@ header, .intro-section, .about-us, .events-section, .initiatives-section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
     background-color: #ffffff;
     color: #4AAAF7;
     border: 2px solid #4AAAF7;

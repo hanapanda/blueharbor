@@ -36,17 +36,42 @@ window.addEventListener('scroll', () => {
 });
 
 // Carousel functionality
-function nextSlide(carouselId) {
-    const carousel = document.getElementById(carouselId);
-    const firstSlide = carousel.firstElementChild;
-    carousel.appendChild(firstSlide);
-}
 
-function previousSlide(carouselId) {
-    const carousel = document.getElementById(carouselId);
-    const lastSlide = carousel.lastElementChild;
-    carousel.insertBefore(lastSlide, carousel.firstChild);
-}
+const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        let currentIndex = 0;
+
+        // Function to show the current slide and hide others
+        const showSlide = (index) => {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active'); // Remove active class from all slides
+                if (i === index) {
+                    slide.classList.add('active'); // Add active class to the current slide
+                }
+            });
+        };
+
+        // Initial slide display
+        showSlide(currentIndex);
+
+        // Next slide function
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % slides.length; // Loop back to first slide
+            showSlide(currentIndex);
+        };
+
+        // Previous slide function
+        const previousSlide = () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to last slide
+            showSlide(currentIndex);
+        };
+
+        // Attach click event listeners to buttons
+        carousel.parentElement.querySelector('.carousel-button.left').addEventListener('click', previousSlide);
+        carousel.parentElement.querySelector('.carousel-button.right').addEventListener('click', nextSlide);
+    });
 // scripts.js
 
 // Function to handle smooth navigation with fade-out effect
@@ -119,5 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Trigger animation for elements already in view on load
     handleScrollAnimation();
+
+    
 });
 
