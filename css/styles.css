@@ -299,6 +299,146 @@ header, .intro-section, .about-us, .events-section, .initiatives-section {
     background-color: #3498db;
 }
 
+/* Partners Section Styles */
+.partners-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Light background to differentiate */
+    text-align: center;
+    
+}
+
+.partners-section h2 {
+    font-size: 36px;
+    color: #4AAAF7;
+    margin-bottom: 40px; /* More space below title */
+}
+
+/* Partners Grid Layout */
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the grid */
+    gap: 30px;
+}
+
+.partner-card {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 20px;
+    width: 250px; /* Adjust width as needed */
+    border: 1px solid #ddd; /* Subtle border for clean separation */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+    margin: 10px; /* Added margin to ensure spacing between boxes */
+}
+
+.partner-card:hover {
+    border-color: #4AAAF7; /* Blue border on hover */
+}
+
+.partner-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.partner-card h3 {
+    font-size: 20px;
+    /* color: #4AAAF7; */
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Partners Section */
+@media (max-width: 768px) {
+    .partners-grid {
+        flex-direction: column;
+        align-items: center; /* Center items on small screens */
+    }
+
+    .partner-card {
+        width: 80%; /* Expand width on smaller screens */
+    }
+}
+
+/* Partner Schools Section Styles */
+.partner-schools-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Light background similar to partners section */
+    text-align: center;
+}
+
+.partner-schools-section h2 {
+    font-size: 36px;
+    color: #4AAAF7;
+    margin-bottom: 40px; /* Space below the title */
+}
+
+/* Schools Grid Layout */
+.schools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the grid */
+    gap: 30px; /* Space between school cards */
+}
+
+.school-card {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 20px;
+    width: 250px; /* Adjust width to match partners cards */
+    border: 1px solid #ddd; /* Subtle border like partners cards */
+    transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+    margin: 10px; /* Spacing between school cards */
+    text-align: center;
+}
+
+.school-card:hover {
+    border-color: #4AAAF7; /* Blue border on hover */
+}
+.school-logo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+.school-logo img {
+    height: 150px;
+    /* height: auto; */
+    /* border-radius: 50%; */
+    margin-bottom: 15px;
+}
+
+
+.school-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.school-card h3 {
+    font-size: 1.3rem;
+    color: #4AAAF7;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Partner Schools Section */
+@media (max-width: 768px) {
+    .schools-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .school-card {
+        width: 80%; /* Expand width on smaller screens */
+    }
+}
+
 /* About Us Section Styles */
 .about-us {
     padding: 60px 0;
