@@ -119,7 +119,7 @@ html, body {
     align-items: center;
     gap: 20px; /* Adjust the gap between logo and links */
 }
-/* Styling for Active Link When Navbar is Scrolled */
+
 .navbar.scrolled .navbar-links a.active {
     color: white;
 }
